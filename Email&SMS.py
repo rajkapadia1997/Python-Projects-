@@ -25,8 +25,8 @@ def emailbot(dataDict):
     receiver_email = "............."
 
     message = MIMEMultipart()
-    message["From"] = sender_email
-    message["To"] = receiver_email
+    message["From"] = #sender_email
+    message["To"] = #receiver_email
     message["Subject"] = subject
     # Add body to email
     body = dataDict["info"]
@@ -43,7 +43,7 @@ def emailbot(dataDict):
     with smtplib.SMTP(host = "smtp.gmail.com", port = 587) as server:
         server.ehlo()
         server.starttls()
-        server.login("sender_email", "password")
+        server.login("#sender_email", "#password")
         server.sendmail(sender_email, receiver_email, message.as_string())
         server.close()
     print('Sent')
